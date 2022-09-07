@@ -5,7 +5,6 @@ import (
 )
 
 func main() {
-	z01.PrintRune('\n')
 	z01.PrintRune('z')
 	z01.PrintRune('y')
 	z01.PrintRune('x')
@@ -32,4 +31,5 @@ func main() {
 	z01.PrintRune('c')
 	z01.PrintRune('b')
 	z01.PrintRune('a')
+	z01.PrintRune('\n')
 }
