@@ -8,6 +8,10 @@ import "piscine"
 // 	piscine.IsNegative(-1)
 // }
 
+// func main() {
+// 	piscine.PrintComb()
+// }
+
 func main() {
-	piscine.PrintComb()
+	piscine.PrintComb2()
 }
