@@ -2,8 +2,8 @@ package piscine
 
 func IsNegative(nb int) string {
 	if nb < 0 {
-		return "T \n"
+		return "T"
 	} else {
-		return "F \n"
+		return "F"
 	}
 }
