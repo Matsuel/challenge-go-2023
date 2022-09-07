@@ -2,8 +2,8 @@ package student
 
 func IsNegative(nb int) string {
 	if nb < 0 {
-		return "T \n"
+		return "T" + "\n"
 	} else {
-		return "F \n"
+		return "F \n" + "\n"
 	}
 }
