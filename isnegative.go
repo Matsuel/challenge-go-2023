@@ -1,9 +1,14 @@
 package piscine
 
-func IsNegative(nb int) string {
-	if nb > 0 {
-		return "F"
+import (
+	"github.com/01-edu/z01"
+)
+
+func IsNegative(nb int) {
+	nb_int := int(string(string(nb))[0])
+	if nb_int >= 0 && nb_int <= 9 {
+		z01.PrintRune('F')
 	} else {
-		return "T"
+		z01.PrintRune('T')
 	}
 }
