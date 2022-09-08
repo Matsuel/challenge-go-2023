@@ -12,3 +12,5 @@ func StrRev(s string) string {
 	}
 	return word
 }
+
+// Stirng c'est comme un tebaleau donc string[-1]= tableau[-1]
