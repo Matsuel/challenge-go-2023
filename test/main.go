@@ -41,6 +41,34 @@
 // 	piscine.PrintCombN(9)
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	n := 0
+// 	piscine.PointOne(&n)
+// 	fmt.Println(n)
+// }
+
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	a := 0
+// 	b := &a
+// 	n := &b
+// 	piscine.UltimatePointOne(&n)
+// 	fmt.Println(a)
+// }
+
 package main
 
 import (
@@ -49,7 +77,11 @@ import (
 )
 
 func main() {
-	n := 0
-	piscine.PointOne(&n)
-	fmt.Println(n)
+	a := 13
+	b := 2
+	var div int
+	var mod int
+	piscine.DivMod(a, b, &div, &mod)
+	fmt.Println(div)
+	fmt.Println(mod)
 }
