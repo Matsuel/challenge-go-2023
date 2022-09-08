@@ -31,12 +31,25 @@
 // 	z01.PrintRune('\n')
 // }
 
+// package main
+
+// import "piscine"
+
+// func main() {
+// 	piscine.PrintCombN(1)
+// 	piscine.PrintCombN(3)
+// 	piscine.PrintCombN(9)
+// }
+
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	piscine.PrintCombN(1)
-	piscine.PrintCombN(3)
-	piscine.PrintCombN(9)
+	n := 0
+	piscine.PointOne(&n)
+	fmt.Println(n)
 }
