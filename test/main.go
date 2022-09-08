@@ -109,6 +109,18 @@
 // 	piscine.PrintStr("Hello World!")
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	l := piscine.StrLen("Hello World!")
+// 	fmt.Println(l)
+// }
+
 package main
 
 import (
@@ -117,6 +129,9 @@ import (
 )
 
 func main() {
-	l := piscine.StrLen("Hello World!")
-	fmt.Println(l)
+	a := 0
+	b := 1
+	piscine.Swap(&a, &b)
+	fmt.Println(a)
+	fmt.Println(b)
 }
