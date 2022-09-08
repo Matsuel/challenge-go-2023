@@ -101,10 +101,22 @@
 // 	fmt.Println(b)
 // }
 
+// package main
+
+// import "piscine"
+
+// func main() {
+// 	piscine.PrintStr("Hello World!")
+// }
+
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	piscine.PrintStr("Hello World!")
+	l := piscine.StrLen("Hello World!")
+	fmt.Println(l)
 }
