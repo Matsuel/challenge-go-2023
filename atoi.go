@@ -6,6 +6,9 @@ func Atoi(s string) int {
 	n := 1
 	atoi := []rune{}
 	for _, character := range s {
+		if len(s) == 1 {
+			return int(character)
+		}
 		if character == '-' && s[1] != '-' {
 			coef_mul = -1
 		} else if character == '+' && s[1] != '+' {
