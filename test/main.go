@@ -253,6 +253,18 @@
 // 	fmt.Println(piscine.RecursivePower(-4, 3))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	arg1 := 4
+// 	fmt.Println(piscine.Fibonacci(arg1))
+// }
+
 package main
 
 import (
@@ -261,6 +273,6 @@ import (
 )
 
 func main() {
-	arg1 := 4
-	fmt.Println(piscine.Fibonacci(arg1))
+	fmt.Println(piscine.Sqrt(4))
+	fmt.Println(piscine.Sqrt(3))
 }
