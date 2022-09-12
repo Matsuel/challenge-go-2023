@@ -194,6 +194,19 @@
 // 	fmt.Println(piscine.Atoi("--1234"))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	s := []int{5, 4, 3, 2, 1, 0}
+// 	piscine.SortIntegerTable(s)
+// 	fmt.Println(s)
+// }
+
 package main
 
 import (
@@ -202,7 +215,6 @@ import (
 )
 
 func main() {
-	s := []int{5, 4, 3, 2, 1, 0}
-	piscine.SortIntegerTable(s)
-	fmt.Println(s)
+	arg := 4
+	fmt.Println(piscine.IterativeFactorial(arg))
 }
