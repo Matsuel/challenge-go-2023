@@ -6,8 +6,8 @@ func IterativeFactorial(nb int) int {
 		return 0
 	} else if nb > 10 || nb == 1 {
 		return 1
-	} else if nb > 0 {
-		for i := nb; i > 0 && i < 10; i-- {
+	} else {
+		for i := nb; i > 0; i-- {
 			rep *= i
 		}
 	}
