@@ -227,6 +227,6 @@ import (
 )
 
 func main() {
-	arg := 4
+	arg := 20
 	fmt.Println(piscine.RecursiveFactorial(arg))
 }
