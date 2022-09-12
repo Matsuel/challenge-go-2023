@@ -242,6 +242,17 @@
 // 	fmt.Println(piscine.IterativePower(4, 3))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	fmt.Println(piscine.RecursivePower(-4, 3))
+// }
+
 package main
 
 import (
@@ -250,5 +261,6 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.RecursivePower(-4, 3))
+	arg1 := 4
+	fmt.Println(piscine.Fibonacci(arg1))
 }
