@@ -5,7 +5,7 @@ func RecursivePower(nb int, power int) int {
 		return 1
 	} else if power < 0 {
 		if nb < 0 {
-			return 1
+			return 0
 		} else {
 			return 0
 		}
