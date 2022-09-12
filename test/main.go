@@ -231,6 +231,17 @@
 // 	fmt.Println(piscine.RecursiveFactorial(arg))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	fmt.Println(piscine.IterativePower(4, 3))
+// }
+
 package main
 
 import (
@@ -239,5 +250,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.IterativePower(4, 3))
+	fmt.Println(piscine.RecursivePower(4, 3))
 }
