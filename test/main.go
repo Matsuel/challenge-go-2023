@@ -207,6 +207,18 @@
 // 	fmt.Println(s)
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	arg := 20
+// 	fmt.Println(piscine.IterativeFactorial(arg))
+// }
+
 package main
 
 import (
@@ -215,6 +227,6 @@ import (
 )
 
 func main() {
-	arg := 20
-	fmt.Println(piscine.IterativeFactorial(arg))
+	arg := 4
+	fmt.Println(piscine.RecursiveFactorial(arg))
 }
