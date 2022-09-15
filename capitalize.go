@@ -11,6 +11,8 @@ func Capitalize(s string) string {
 			rep += string(rune(s[i]))
 		} else if IsUpper(string(s[i])) && IsUpper(string(rep[i-1])) {
 			rep += string(rune(s[i] + 32))
+		} else if IsUpper(string(s[i])) && IsLower(string(rep[i-1])) {
+			rep += string(rune(s[i] + 32))
 		} else {
 			rep += string(s[i])
 		}

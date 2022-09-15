@@ -420,5 +420,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Capitalize("KDk{2QM NOWeZ"))
+	fmt.Println(piscine.Capitalize("6\"Uu5TdN>xI\"E"))
 }
