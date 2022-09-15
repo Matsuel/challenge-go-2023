@@ -3,7 +3,7 @@ package piscine
 func BasicJoin(elems []string) string {
 	var rep string
 	for _, el := range elems {
-		rep += el
+		rep += string(el)
 		rep += " "
 	}
 	return rep
