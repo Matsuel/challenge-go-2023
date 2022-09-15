@@ -382,7 +382,9 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Index("Hello!", "l"))
-	fmt.Println(piscine.Index("Salut!", "alu"))
-	fmt.Println(piscine.Index("Ola!", "hOl"))
+	// fmt.Println(piscine.Index("Hello!", "l"))
+	// fmt.Println(piscine.Index("Salut!", "alu"))
+	// fmt.Println(piscine.Index("Ola!", "hOl"))
+	// fmt.Println(piscine.Index("Salut!", "ut!"))
+	fmt.Println(piscine.Index("\\gm^45[*Ol7V[", "5[*Ol7V"))
 }
