@@ -301,17 +301,33 @@
 // 	fmt.Println(piscine.FindNextPrime(4))
 // }
 
+// package main
+
+// import (
+// 	"piscine"
+
+// 	"github.com/01-edu/z01"
+// )
+
+// func main() {
+// 	z01.PrintRune(piscine.FirstRune("Hello!"))
+// 	z01.PrintRune(piscine.FirstRune("Salut!"))
+// 	z01.PrintRune(piscine.FirstRune("Ola!"))
+// 	z01.PrintRune('\n')
+// }
+
+
 package main
 
 import (
-	"piscine"
-
 	"github.com/01-edu/z01"
+
+	"piscine"
 )
 
 func main() {
-	z01.PrintRune(piscine.FirstRune("Hello!"))
-	z01.PrintRune(piscine.FirstRune("Salut!"))
-	z01.PrintRune(piscine.FirstRune("Ola!"))
+	z01.PrintRune(piscine.LastRune("Hello!"))
+	z01.PrintRune(piscine.LastRune("Salut!"))
+	z01.PrintRune(piscine.LastRune("Ola!"))
 	z01.PrintRune('\n')
 }
