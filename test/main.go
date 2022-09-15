@@ -301,18 +301,6 @@
 // 	fmt.Println(piscine.FindNextPrime(4))
 // }
 
-// package main
-
-// import (
-// 	"fmt"
-// 	"piscine"
-// )
-
-// func main() {
-// 	fmt.Println(piscine.EightQueens())
-// }
-
-
 package main
 
 import (
