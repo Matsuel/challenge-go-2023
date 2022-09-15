@@ -374,6 +374,21 @@
 // 	fmt.Println(nb)
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	// fmt.Println(piscine.Index("Hello!", "l"))
+// 	// fmt.Println(piscine.Index("Salut!", "alu"))
+// 	// fmt.Println(piscine.Index("Ola!", "hOl"))
+// 	// fmt.Println(piscine.Index("Salut!", "ut!"))
+// 	fmt.Println(piscine.Index("\\gm^45[*Ol7V[", "5[*Ol7V"))
+// }
+
 package main
 
 import (
@@ -382,9 +397,6 @@ import (
 )
 
 func main() {
-	// fmt.Println(piscine.Index("Hello!", "l"))
-	// fmt.Println(piscine.Index("Salut!", "alu"))
-	// fmt.Println(piscine.Index("Ola!", "hOl"))
-	// fmt.Println(piscine.Index("Salut!", "ut!"))
-	fmt.Println(piscine.Index("\\gm^45[*Ol7V[", "5[*Ol7V"))
+	fmt.Println(piscine.Concat("Hello!", " How are you?"))
+
 }
