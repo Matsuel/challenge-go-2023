@@ -400,6 +400,18 @@
 // 	fmt.Println(piscine.Concat("Hello!", " How are you?"))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	fmt.Println(piscine.IsUpper("HELLO"))
+// 	fmt.Println(piscine.IsUpper("HELLO!"))
+// }
+
 package main
 
 import (
@@ -408,6 +420,5 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.IsUpper("HELLO"))
-	fmt.Println(piscine.IsUpper("HELLO!"))
+	fmt.Println(piscine.Capitalize("Hello! How are you? How+are+things+4you?"))
 }
