@@ -7,7 +7,7 @@ func TrimAtoi(s string) int {
 		if IsNumeric(string(ch)) {
 			rep += int(ch - 48)
 			rep *= 10
-		} else if ch == '-' && rep >= 10 {
+		} else if ch == '-' && rep >= 0 {
 			m = -1
 		}
 	}
