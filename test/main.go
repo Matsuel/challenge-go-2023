@@ -389,6 +389,17 @@
 // 	fmt.Println(piscine.Index("\\gm^45[*Ol7V[", "5[*Ol7V"))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	fmt.Println(piscine.Concat("Hello!", " How are you?"))
+// }
+
 package main
 
 import (
@@ -397,5 +408,7 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Concat("Hello!", " How are you?"))
+	fmt.Println(piscine.IsUpper("HELLO"))
+	fmt.Println(piscine.IsUpper("HELLO!"))
+
 }
