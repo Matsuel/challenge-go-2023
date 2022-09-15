@@ -412,6 +412,17 @@
 // 	fmt.Println(piscine.IsUpper("HELLO!"))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	fmt.Println(piscine.Capitalize("6\"Uu5TdN>xI\"E"))
+// }
+
 package main
 
 import (
@@ -420,5 +431,6 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Capitalize("6\"Uu5TdN>xI\"E"))
+	toConcat := []string{"Hello!", " How", " are", " you?"}
+	fmt.Println(piscine.Join(toConcat, ":"))
 }
