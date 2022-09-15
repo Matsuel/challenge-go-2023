@@ -423,14 +423,24 @@
 // 	fmt.Println(piscine.Capitalize("6\"Uu5TdN>xI\"E"))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	toConcat := []string{"Hello!", " How", " are", " you?"}
+// 	fmt.Println(piscine.Join(toConcat, ":"))
+// }
+
 package main
 
-import (
-	"fmt"
-	"piscine"
-)
+import "piscine"
 
 func main() {
-	toConcat := []string{"Hello!", " How", " are", " you?"}
-	fmt.Println(piscine.Join(toConcat, ":"))
+	piscine.PrintNbrInOrder(321)
+	piscine.PrintNbrInOrder(0)
+	piscine.PrintNbrInOrder(321)
 }
