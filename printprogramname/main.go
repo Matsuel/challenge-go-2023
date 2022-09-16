@@ -8,15 +8,10 @@ import (
 
 func main() {
 	arguments := os.Args[0]
-	i := len(arguments)
-	for rune(arguments[i]) != rune(92) {
-		i--
+	r := []rune(arguments)
+	for i := 2; i < len(r); i++ {
+		z01.PrintRune(r[i])
 	}
-	z01.PrintRune('.')
-	z01.PrintRune('/')
-	for i < len(arguments)-4 {
-		z01.PrintRune(rune(arguments[i]))
-		i++
-	}
+	z01.PrintRune('\n')
 	// si sa print toute la ligne c'est normal c'est windows
 }
