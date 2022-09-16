@@ -8,7 +8,7 @@ import (
 
 func main() {
 	arguments := os.Args
-	for i := len(arguments); i > 2; i-- {
+	for i := len(arguments) - 1; i > 1; i-- {
 		for j := 0; j < len(string(arguments[i])); j++ {
 			z01.PrintRune(rune(arguments[i][j]))
 		}
