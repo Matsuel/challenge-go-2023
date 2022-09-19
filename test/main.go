@@ -463,6 +463,18 @@
 // 	fmt.Println(piscine.TrimAtoi("sdx1+fa2W3s4"))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	fmt.Println(piscine.AppendRange(5, 10))
+// 	fmt.Println(piscine.AppendRange(10, 5))
+// }
+
 package main
 
 import (
@@ -471,6 +483,6 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.AppendRange(5, 10))
-	fmt.Println(piscine.AppendRange(10, 5))
+	fmt.Println(piscine.MakeRange(5, 10))
+	fmt.Println(piscine.MakeRange(10, 5))
 }
