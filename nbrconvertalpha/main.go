@@ -20,7 +20,7 @@ func main() {
 			}
 		}
 		z01.PrintRune(rune('\n'))
-	} else {
+	} else if len(arguments) > 1 {
 		for i := 1; i < len(arguments); i++ {
 			a := Atoi(arguments[i])
 			if a == 0 {
