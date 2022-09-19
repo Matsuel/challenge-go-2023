@@ -2,7 +2,7 @@ package piscine
 
 func Split(s, sep string) []string {
 	rep := []string{}
-	mot := string(s[0])
+	mot := ""
 	a := 0
 	for i := 0; i < len(s); i++ {
 		if s[i] == sep[0] && len(sep) > 1 {
