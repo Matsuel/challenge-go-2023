@@ -13,6 +13,8 @@ func SplitWhiteSpaces(s string) []string {
 			mot += string(ch)
 		}
 	}
-	rep = append(rep, mot)
+	if mot != "" {
+		rep = append(rep, mot)
+	}
 	return rep
 }
