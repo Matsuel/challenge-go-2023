@@ -487,6 +487,18 @@
 // 	fmt.Println(piscine.MakeRange(10, 5))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	test := []string{"Hello", "how", "are", "you?"}
+// 	fmt.Println(piscine.ConcatParams(test))
+// }
+
 package main
 
 import (
@@ -495,6 +507,5 @@ import (
 )
 
 func main() {
-	test := []string{"Hello", "how", "are", "you?"}
-	fmt.Println(piscine.ConcatParams(test))
+	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces("Hello how are you?"))
 }
