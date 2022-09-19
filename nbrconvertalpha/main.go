@@ -11,7 +11,7 @@ func main() {
 	if len(arguments) == 0 {
 		z01.PrintRune(rune(32))
 		z01.PrintRune('\n')
-	} else if arguments[1] == "--upper" {
+	} else if len(arguments) > 1 && arguments[1] == "--upper" {
 		for i := 2; i < len(arguments); i++ {
 			a := Atoi(arguments[i])
 			if a == 0 {
