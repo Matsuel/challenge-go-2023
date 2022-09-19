@@ -22,6 +22,7 @@ func main() {
 				z01.PrintRune(rune(32))
 			}
 		}
+		z01.PrintRune(rune('\n'))
 	} else {
 		for i := 1; i < len(arguments); i++ {
 			a := Atoi(arguments[i])
@@ -33,6 +34,7 @@ func main() {
 				z01.PrintRune(rune(32))
 			}
 		}
+		z01.PrintRune(rune('\n'))
 	}
 }
 
