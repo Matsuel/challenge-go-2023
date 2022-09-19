@@ -5,8 +5,10 @@ func SplitWhiteSpaces(s string) []string {
 	mot := ""
 	for _, ch := range s {
 		if string(ch) == " " {
-			rep = append(rep, mot)
-			mot = ""
+			if mot != "" {
+				rep = append(rep, mot)
+				mot = ""
+			}
 		} else {
 			mot += string(ch)
 		}
