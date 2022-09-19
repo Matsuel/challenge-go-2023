@@ -15,6 +15,8 @@ func Split(s, sep string) []string {
 				i = i + a
 				rep = append(rep, mot)
 				mot = ""
+			} else {
+				mot += string(s[i])
 			}
 		} else {
 			mot += string(s[i])
