@@ -510,14 +510,23 @@
 // 	fmt.Printf("%#v\n", piscine.SplitWhiteSpaces("Hello how are you?"))
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	s := "HelloHAhowHAareHAyou?"
+// 	fmt.Printf("%#v\n", piscine.Split(s, "HA"))
+// }
+
 package main
 
-import (
-	"fmt"
-	"piscine"
-)
+import "piscine"
 
 func main() {
-	s := "HelloHAhowHAareHAyou?"
-	fmt.Printf("%#v\n", piscine.Split(s, "HA"))
+	a := piscine.SplitWhiteSpaces("Hello how are you?")
+	piscine.PrintWordsTables(a)
 }
