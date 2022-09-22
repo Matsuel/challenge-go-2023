@@ -522,11 +522,23 @@
 // 	fmt.Printf("%#v\n", piscine.Split(s, "HA"))
 // }
 
+// package main
+
+// import "piscine"
+
+// func main() {
+// 	a := piscine.SplitWhiteSpaces("Hello how are you?")
+// 	piscine.PrintWordsTables(a)
+// }
+
 package main
 
-import "piscine"
+import (
+	"fmt"
+	"piscine"
+)
 
 func main() {
-	a := piscine.SplitWhiteSpaces("Hello how are you?")
-	piscine.PrintWordsTables(a)
+	result := piscine.ConvertBase("101011", "01", "0123456789")
+	fmt.Println(result)
 }
