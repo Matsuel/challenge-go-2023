@@ -25,11 +25,11 @@ func main() {
 		} else if i == 2 {
 			if args[2] == "0" && args[1] == "/" {
 				fmt.Println("No division by 0")
-					return
-			}else if args[2] == "0" && args[1] == "/" {
-					fmt.Println("No modulo by 0")
-					return 
-			}else if args[1] == "+" {
+				return
+			} else if args[2] == "0" && args[1] == "/" {
+				fmt.Println("No modulo by 0")
+				return
+			} else if args[1] == "+" {
 				rep += Atoi(args[2])
 			} else if args[1] == "*" {
 				rep *= Atoi(args[2])
