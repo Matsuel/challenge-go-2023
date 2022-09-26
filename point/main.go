@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/01-edu/z01"
-)
+import "github.com/01-edu/z01"
 
 type point struct {
 	x, y int
@@ -16,22 +14,17 @@ func setPoint(ptr *point) {
 func main() {
 	points := &point{}
 	setPoint(points)
-	list := []string{}
-	list = append(list, string(points.x))
-	list = append(list, string(points.y))
-	z01.PrintRune('x')
-	z01.PrintRune(rune(32))
-	z01.PrintRune('=')
-	z01.PrintRune(rune(32))
-	for _, ch := range list[0] {
-		z01.PrintRune(ch)
+	pt := ""
+	pt += "x = "
+	for _, ch := range string(points.x) {
+		pt += string(ch)
 	}
-	z01.PrintRune('y')
-	z01.PrintRune(rune(32))
-	z01.PrintRune('=')
-	z01.PrintRune(rune(32))
-	for _, ch := range list[1] {
-		z01.PrintRune(ch)
+	pt += ", y = "
+	for _, ch := range string(points.y) {
+		pt += string(ch)
+	}
+	for i := 0; i < len(pt); i++ {
+		z01.PrintRune(rune(pt[i]))
 	}
 	z01.PrintRune('\n')
 }
