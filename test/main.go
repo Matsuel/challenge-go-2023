@@ -531,6 +531,18 @@
 // 	piscine.PrintWordsTables(a)
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	result := piscine.ConvertBase("101011", "01", "0123456789")
+// 	fmt.Println(result)
+// }
+
 package main
 
 import (
@@ -539,6 +551,22 @@ import (
 )
 
 func main() {
-	result := piscine.ConvertBase("101011", "01", "0123456789")
-	fmt.Println(result)
+	a1 := []int{0, 1, 2, 3, 4, 5}
+	a2 := []int{0, 2, 1, 3}
+
+	result1 := piscine.IsSorted(f, a1)
+	result2 := piscine.IsSorted(f, a2)
+
+	fmt.Println(result1)
+	fmt.Println(result2)
+}
+
+func f(a, b int) int {
+	if a == b {
+		return 0
+	} else if a > b {
+		return 1
+	} else {
+		return -1
+	}
 }
