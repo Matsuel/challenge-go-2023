@@ -1,6 +1,8 @@
 package main
 
-import "github.com/01-edu/z01"
+import (
+	"github.com/01-edu/z01"
+)
 
 type point struct {
 	x, y int
@@ -13,18 +15,55 @@ func setPoint(ptr *point) {
 
 func main() {
 	points := &point{}
+
 	setPoint(points)
-	pt := ""
-	pt += "x = "
-	for _, ch := range string(points.x) {
-		pt += string(ch)
+
+	z01.PrintRune(rune('x'))
+	z01.PrintRune(rune(32))
+	z01.PrintRune(rune('='))
+	z01.PrintRune(rune(32))
+	listee := []rune{}
+	for points.x > 0 {
+		nb := points.x % 10
+		listee = append(listee, rune(nb+48))
+		points.x /= 10
+
 	}
-	pt += ", y = "
-	for _, ch := range string(points.y) {
-		pt += string(ch)
+	for i := len(listee) - 1; i >= 0; i-- {
+		z01.PrintRune(listee[i])
 	}
-	for i := 0; i < len(pt); i++ {
-		z01.PrintRune(rune(pt[i]))
+	z01.PrintRune(rune(points.x))
+
+	z01.PrintRune(rune(','))
+	z01.PrintRune(rune(32))
+	z01.PrintRune(rune('y'))
+	z01.PrintRune(rune(32))
+	z01.PrintRune(rune('='))
+	z01.PrintRune(rune(32))
+	liste := []rune{}
+	for points.y > 0 {
+		nb := points.y % 10
+		liste = append(liste, rune(nb+48))
+		points.y /= 10
 	}
+	for i := len(liste) - 1; i >= 0; i-- {
+		z01.PrintRune(liste[i])
+	}
+	z01.PrintRune(rune(points.y))
 	z01.PrintRune('\n')
+
 }
+
+// points := &point{}
+// 	setPoint(points)
+// 	pt := ""
+// 	pt += "x = "
+// 	for _, ch := range string(points.x) {
+// 		pt += string(ch)
+// 	}
+// 	pt += ", y = "
+// 	for _, ch := range string(points.y) {
+// 		pt += string(ch)
+// 	}
+// 	fmt.Println(pt)
+// 	z01.PrintRune('\n')
