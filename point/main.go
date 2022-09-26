@@ -16,21 +16,22 @@ func setPoint(ptr *point) {
 func main() {
 	points := &point{}
 	setPoint(points)
-	p_y := string(points.y)
-	p_x := string(points.x)
+	list := []string{}
+	list = append(list, string(points.x))
+	list = append(list, string(points.y))
 	z01.PrintRune('x')
 	z01.PrintRune(rune(32))
 	z01.PrintRune('=')
 	z01.PrintRune(rune(32))
-	for _, ch := range p_x {
-		z01.PrintRune(ch + 10)
+	for _, ch := range list[0] {
+		z01.PrintRune(ch)
 	}
 	z01.PrintRune('y')
 	z01.PrintRune(rune(32))
 	z01.PrintRune('=')
 	z01.PrintRune(rune(32))
-	for _, ch := range p_y {
-		z01.PrintRune(ch + 10)
+	for _, ch := range list[1] {
+		z01.PrintRune(ch)
 	}
 	z01.PrintRune('\n')
 }
