@@ -18,7 +18,7 @@ func main() {
 			z01.PrintRune('\n')
 		}
 	} else if len(arg) >= 2 {
-		for i := 1; i < len(arg) || i < 10; i++ {
+		for i := 1; i < len(arg)-1 || i < 10; i++ {
 			data, err := ioutil.ReadFile(arg[i])
 			if err == nil {
 				for _, ch := range string(data) {
