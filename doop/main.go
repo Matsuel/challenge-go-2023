@@ -1,8 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
@@ -24,10 +25,16 @@ func main() {
 			}
 		} else if i == 2 {
 			if args[2] == "0" && args[1] == "/" {
-				fmt.Println("No division by 0")
+				err := "No division by 0"
+				for _, ch := range err {
+					z01.PrintRune(ch)
+				}
 				return
-			} else if args[2] == "0" && args[1] == "/" {
-				fmt.Println("No modulo by 0")
+			} else if args[2] == "0" && args[1] == "%" {
+				err := "No modulo by 0"
+				for _, ch := range err {
+					z01.PrintRune(ch)
+				}
 				return
 			} else if args[1] == "+" {
 				rep += Atoi(args[2])
@@ -40,7 +47,10 @@ func main() {
 			}
 		}
 	}
-	fmt.Println(rep)
+	reponse := string(rep)
+	for _, ch := range reponse {
+		z01.PrintRune(ch + 48)
+	}
 }
 
 func Atoi(s string) int {
