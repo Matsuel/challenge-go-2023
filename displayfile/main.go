@@ -13,7 +13,7 @@ func main() {
 	} else if len(arg) == 2 {
 		data, err := ioutil.ReadFile(arg[1])
 		if err == nil {
-			fmt.Printf(string(data[2:]))
+			fmt.Printf(string(data))
 		}
 	} else {
 		fmt.Println("Too many arguments")
