@@ -25,7 +25,7 @@ func main() {
 					z01.PrintRune(ch)
 				}
 			} else if err != nil && i == 1 {
-				rep := "ERROR: open " + string(arg[1]) + ": No such file or directory"
+				rep := "ERROR: open " + string(arg[1]) + ": no such file or directory"
 				for _, ch := range rep {
 					z01.PrintRune(ch)
 				}
