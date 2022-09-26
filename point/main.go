@@ -15,7 +15,6 @@ func setPoint(ptr *point) {
 
 func main() {
 	points := &point{}
-
 	setPoint(points)
 	p_y := string(points.y)
 	p_x := string(points.x)
@@ -34,5 +33,4 @@ func main() {
 		z01.PrintRune(ch + 48)
 	}
 	z01.PrintRune('\n')
-
 }
