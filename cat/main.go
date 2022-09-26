@@ -16,6 +16,7 @@ func main() {
 			for _, ch := range rep {
 				z01.PrintRune(ch)
 			}
+			z01.PrintRune('\n')
 			time.Sleep(800)
 		}
 	} else if len(arg) >= 2 {
