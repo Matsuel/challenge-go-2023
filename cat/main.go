@@ -3,7 +3,6 @@ package main
 import (
 	"io/ioutil"
 	"os"
-	"time"
 
 	"github.com/01-edu/z01"
 )
@@ -17,7 +16,6 @@ func main() {
 				z01.PrintRune(ch)
 			}
 			z01.PrintRune('\n')
-			time.Sleep(800)
 		}
 	} else if len(arg) >= 2 {
 		for i := 1; i < len(arg); i++ {
