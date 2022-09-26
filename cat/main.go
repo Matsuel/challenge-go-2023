@@ -37,6 +37,8 @@ func main() {
 					z01.PrintRune(ch)
 				}
 				z01.PrintRune('\n')
+			} else {
+				os.Exit(1)
 			}
 		}
 	}
