@@ -53,17 +53,3 @@ func main() {
 	z01.PrintRune('\n')
 
 }
-
-// points := &point{}
-// 	setPoint(points)
-// 	pt := ""
-// 	pt += "x = "
-// 	for _, ch := range string(points.x) {
-// 		pt += string(ch)
-// 	}
-// 	pt += ", y = "
-// 	for _, ch := range string(points.y) {
-// 		pt += string(ch)
-// 	}
-// 	fmt.Println(pt)
-// 	z01.PrintRune('\n')
