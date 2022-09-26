@@ -16,4 +16,5 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		}
 		return true
 	}
+	return false
 }
