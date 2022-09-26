@@ -23,14 +23,14 @@ func main() {
 	z01.PrintRune('=')
 	z01.PrintRune(rune(32))
 	for _, ch := range p_x {
-		z01.PrintRune(ch + 48)
+		z01.PrintRune(ch + 10)
 	}
 	z01.PrintRune('y')
 	z01.PrintRune(rune(32))
 	z01.PrintRune('=')
 	z01.PrintRune(rune(32))
 	for _, ch := range p_y {
-		z01.PrintRune(ch + 48)
+		z01.PrintRune(ch + 10)
 	}
 	z01.PrintRune('\n')
 }
