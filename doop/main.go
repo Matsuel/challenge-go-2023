@@ -12,8 +12,11 @@ func main() {
 	}
 	for i := 0; i < len(args); i++ {
 		if i == 0 {
-			if Atoi(args[0]) != 0 {
+			if Atoi(args[0]) > 0 {
 				rep = Atoi(args[0])
+			} else if args[0] < "0" {
+				rep = Atoi(args[0][1:])
+				rep *= -1
 			} else {
 				return
 			}
@@ -39,16 +42,7 @@ func main() {
 			}
 		}
 	}
-	res := []string{}
-	for i := 0; rep > 0; i++ {
-		a := rep % 10
-		res = append(res, string(a+48))
-		rep -= a
-		rep /= 10
-	}
-	for i := len(res) - 1; i >= 0; i-- {
-		os.Stdout.WriteString(res[i])
-	}
+	os.Stdout.WriteString(string(string(rep)))
 }
 
 func Atoi(s string) int {
