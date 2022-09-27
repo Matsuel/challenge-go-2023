@@ -27,9 +27,11 @@ func main() {
 		} else if i == 2 {
 			if args[2] == "0" && args[1] == "/" {
 				os.Stdout.WriteString("No division by 0")
+				os.Stdout.WriteString("\n")
 				return
 			} else if args[2] == "0" && args[1] == "%" {
 				os.Stdout.WriteString("No modulo by 0")
+				os.Stdout.WriteString("\n")
 				return
 			} else if args[1] == "+" {
 				rep += Atoi(args[2])
