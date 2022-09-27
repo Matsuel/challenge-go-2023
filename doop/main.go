@@ -42,7 +42,15 @@ func main() {
 			}
 		}
 	}
-	os.Stdout.WriteString(string(string(rep)))
+	res := ""
+	if rep > 0 {
+		res = Itoa(rep)
+	} else if rep < 0 {
+		i := rep * -1
+		res += Itoa(i)
+		os.Stdout.Write([]byte("-"))
+	}
+	os.Stdout.WriteString(res)
 }
 
 func Atoi(s string) int {
@@ -56,3 +64,21 @@ func Atoi(s string) int {
 	}
 	return atoi
 }
+
+func Itoa(i int) string {
+	itoa := ""
+	for i != 0 {
+		ch := i % 10
+		i /= 10
+		itoa += string(ch + '0')
+	}
+	res := ""
+	for i := len(itoa) - 1; i >= 0; i-- {
+		res += string(itoa[i])
+	}
+	return res
+}
+
+// func main() {
+// 	fmt.Println(Itoa(-202))
+// }
