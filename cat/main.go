@@ -7,37 +7,26 @@ import (
 	"github.com/01-edu/z01"
 )
 
+func print_rune(message string) {
+	for _, i := range message {
+		z01.PrintRune(i)
+	}
+}
+
 func main() {
-	arg := os.Args
-	if len(arg) == 1 {
-		rep := "Hello"
-		for {
-			for _, ch := range rep {
-				z01.PrintRune(ch)
-			}
-			z01.PrintRune('\n')
-		}
-	} else if len(arg) >= 2 {
-		for i := 1; i < len(arg) || i <= 10; i++ {
-			data, err := ioutil.ReadFile(arg[i])
+	if len(os.Args) == 1 {
+		content, _ := ioutil.ReadAll(os.Stdin)
+		print_rune(string(content))
+	} else {
+		args := os.Args[1:]
+
+		for i := range args {
+			content, err := ioutil.ReadFile(args[i])
 			if err == nil {
-				for _, ch := range string(data) {
-					z01.PrintRune(ch)
-				}
-			} else if err != nil && i == 1 {
-				rep := "ERROR: open " + string(arg[1]) + ": no such file or directory"
-				for _, ch := range rep {
-					z01.PrintRune(ch)
-				}
-				z01.PrintRune('\n')
-				os.Exit(1)
-			} else if err != nil && i != 1 {
-				rep := "ERROR: " + string(arg[1]) + ": No such file or directory"
-				for _, ch := range rep {
-					z01.PrintRune(ch)
-				}
-				z01.PrintRune('\n')
+				print_rune(string(content))
 			} else {
+				print_rune("ERROR: open " + args[i] + ": no such file or directory")
+				print_rune("\n")
 				os.Exit(1)
 			}
 		}
