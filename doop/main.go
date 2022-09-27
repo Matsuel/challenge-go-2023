@@ -23,18 +23,10 @@ func main() {
 			}
 		} else if i == 2 {
 			if args[2] == "0" && args[1] == "/" {
-				err := "No division by 0"
-				// for _, ch := range err {
-				// 	z01.PrintRune(ch)
-				// }
-				print(err)
+				os.Stdout.WriteString("No division by 0")
 				return
 			} else if args[2] == "0" && args[1] == "%" {
-				err := "No modulo by 0"
-				// for _, ch := range err {
-				// 	z01.PrintRune(ch)
-				// }
-				print(err)
+				os.Stdout.WriteString("No modulo by 0")
 				return
 			} else if args[1] == "+" {
 				rep += Atoi(args[2])
@@ -47,11 +39,16 @@ func main() {
 			}
 		}
 	}
-	// reponse := string(rep)
-	// for _, ch := range reponse {
-	// 	z01.PrintRune(ch + 48)
-	// }
-	print(rep)
+	res := []string{}
+	for i := 0; rep > 0; i++ {
+		a := rep % 10
+		res = append(res, string(a+48))
+		rep -= a
+		rep /= 10
+	}
+	for i := len(res) - 1; i >= 0; i-- {
+		os.Stdout.WriteString(res[i])
+	}
 }
 
 func Atoi(s string) int {
