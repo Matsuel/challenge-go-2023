@@ -51,6 +51,7 @@ func main() {
 		os.Stdout.Write([]byte("-"))
 	}
 	os.Stdout.WriteString(res)
+	os.Stdout.WriteString("\n")
 }
 
 func Atoi(s string) int {
