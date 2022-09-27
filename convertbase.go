@@ -1,42 +1,72 @@
 package piscine
 
-import (
-	"math"
-	"strings"
-)
-
 func ConvertBase(nbr, baseFrom, baseTo string) string {
-	return NbrBase(AtoiBase(nbr, baseFrom), baseTo)
+	result1 := AtoiBase(nbr, baseFrom)
+
+	result2 := ConvertNbrBase(result1, baseTo)
+
+	return (result2)
 }
 
-func NbrBase(nbr int, str string) string {
-	indx := 0
-	for _, res := range str {
-		if string(res) == "-" || string(res) == "+" || strings.Count(str, string(res)) > 1 {
-			indx = 1
-			break
+func AtoiBase(s string, base string) int {
+	counter := 0
+	sCounter := 0
+	for i, v := range base {
+		if v == '-' || v == '+' {
+			return 0
 		}
-	}
-	if indx == 1 || len(str) < 2 {
-		return "0"
-	} else if math.MaxInt32 < nbr || math.MinInt32 > nbr {
-		return string(nbr)
-	} else {
-		neg := ""
-		if nbr < 0 {
-			neg = "-"
-			nbr *= -1
-		}
-		i := 0
-		nan := ""
-		for nbr >= len(str) {
-			if nbr >= len(str) {
-				nan += string(str[nbr%len(str)])
-				nbr = nbr / len(str)
-				i++
+		counter++
+		for j, v2 := range base {
+			if v == v2 && i != j {
+				return 0
 			}
 		}
-		nan += string(str[nbr])
-		return neg + Reverse(nan)
 	}
+	for _, v := range s {
+		if v == '-' || v == '+' {
+			return 0
+		}
+		sCounter++
+	}
+	if counter < 2 {
+		return 0
+	}
+	runes := []rune(s)
+	result := 0
+	j := 0
+	for i := sCounter - 1; i >= 0; i-- {
+		r := -1
+		for k, v := range base {
+			if v == runes[i] {
+				r = k
+			}
+		}
+		if r == (-1) {
+			return 0
+		}
+		if j == 0 {
+			result += r
+		} else {
+			ss := 1
+			for l := 0; l < j; l++ {
+				ss *= counter
+			}
+			result += ss * r
+		}
+		j++
+	}
+	return result
+}
+
+func ConvertNbrBase(n int, base string) string {
+	var result string
+	length := len(base)
+
+	for n >= length {
+		result = string(base[(n%length)]) + result
+		n = n / length
+	}
+	result = string(base[n]) + result
+
+	return result
 }
