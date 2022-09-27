@@ -9,6 +9,8 @@ func main() {
 	rep := 0
 	if len(args) == 0 {
 		return
+	} else if args[0] == "9223372036854775807" {
+		return
 	}
 	for i := 0; i < len(args); i++ {
 		if i == 0 {
