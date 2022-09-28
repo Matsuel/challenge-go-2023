@@ -14,6 +14,7 @@ func ListSort(l *NodeI) *NodeI {
 	if courant.Next != nil && courant.Data > courant.Next.Data {
 		courant = move(courant)
 	}
+	return courant
 }
 
 func move(l *NodeI) *NodeI {
