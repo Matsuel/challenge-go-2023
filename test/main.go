@@ -543,30 +543,79 @@
 // 	fmt.Println(result)
 // }
 
+// package main
+
+// import (
+// 	"fmt"
+// 	"piscine"
+// )
+
+// func main() {
+// 	a1 := []int{0, 1, 2, 3, 4, 5}
+// 	a2 := []int{0, 2, 1, 3}
+
+// 	result1 := piscine.IsSorted(f, a1)
+// 	result2 := piscine.IsSorted(f, a2)
+
+// 	fmt.Println(result1)
+// 	fmt.Println(result2)
+// }
+
+// func f(a, b int) int {
+// 	if a == b {
+// 		return 0
+// 	} else if a > b {
+// 		return 1
+// 	} else {
+// 		return -1
+// 	}
+// }
+
 package main
 
 import (
 	"fmt"
+
 	"piscine"
 )
 
-func main() {
-	a1 := []int{0, 1, 2, 3, 4, 5}
-	a2 := []int{0, 2, 1, 3}
+func PrintList(l *piscine.List) {
+	it := l.Head
+	for it != nil {
+		fmt.Print(it.Data, " -> ")
+		it = it.Next
+	}
 
-	result1 := piscine.IsSorted(f, a1)
-	result2 := piscine.IsSorted(f, a2)
-
-	fmt.Println(result1)
-	fmt.Println(result2)
+	fmt.Print(nil, "\n")
 }
 
-func f(a, b int) int {
-	if a == b {
-		return 0
-	} else if a > b {
-		return 1
-	} else {
-		return -1
-	}
+func main() {
+	link := &piscine.List{}
+	link2 := &piscine.List{}
+
+	fmt.Println("----normal state----")
+	piscine.ListPushBack(link2, 1)
+	PrintList(link2)
+	piscine.ListRemoveIf(link2, 1)
+	fmt.Println("------answer-----")
+	PrintList(link2)
+	fmt.Println()
+
+	fmt.Println("----normal state----")
+	piscine.ListPushBack(link, 1)
+	piscine.ListPushBack(link, "Hello")
+	piscine.ListPushBack(link, 1)
+	piscine.ListPushBack(link, "There")
+	piscine.ListPushBack(link, 1)
+	piscine.ListPushBack(link, 1)
+	piscine.ListPushBack(link, "How")
+	piscine.ListPushBack(link, 1)
+	piscine.ListPushBack(link, "are")
+	piscine.ListPushBack(link, "you")
+	piscine.ListPushBack(link, 1)
+	PrintList(link)
+
+	piscine.ListRemoveIf(link, 1)
+	fmt.Println("------answer-----")
+	PrintList(link)
 }
