@@ -21,7 +21,7 @@ func IsAlNode(node *NodeL) bool {
 func ListForEachIf(l *List, f func(*NodeL), cond func(*NodeL) bool) {
 	head := l.Head
 	for head != nil {
-		if cond(head) == true {
+		if cond(head) {
 			f(head)
 		}
 		head = head.Next
