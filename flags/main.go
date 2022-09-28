@@ -13,15 +13,12 @@ func main() {
 		fmt.Println("--insert")
 		fmt.Println("  -i")
 		fmt.Println("    This flag inserts the string passed as argument.")
-
 		fmt.Println("--order")
 		fmt.Println("  -o")
 		fmt.Println("    This flag will behave like a boolean, if it is called it will order the argument.")
 		return
 	}
-
 	otherArgs := getArgs(os.Args[1:])
-
 	for _, arg := range otherArgs {
 		var runes []rune
 		if isOrder {
@@ -31,7 +28,6 @@ func main() {
 		}
 		fmt.Print(string(runes))
 	}
-
 	if isInsert {
 		if isOrder {
 			fmt.Println(string(sortRuneTable([]rune(insertArg))))
@@ -60,19 +56,16 @@ func stringLen(s []rune) int {
 	for range s {
 		count++
 	}
-
 	return count
 }
 
 func getArgs(args []string) []string {
 	var result []string
-
 	for _, arg := range args {
 		if !checkForRune(arg, '-') {
 			result = append(result, arg)
 		}
 	}
-
 	return result
 }
 
@@ -82,7 +75,6 @@ func checkForRune(s string, check rune) bool {
 			return true
 		}
 	}
-
 	return false
 }
 
@@ -100,7 +92,6 @@ func checkForRune(s string, check rune) bool {
 
 func containsArg(args []string, argToFind string, argToFindLen int, takeParam bool) (bool, string) {
 	for _, arg := range args {
-
 		if checkForRune(arg, '-') {
 			if arg[:argToFindLen] == argToFind || arg == argToFind[1:3] {
 				if takeParam {
@@ -111,6 +102,5 @@ func containsArg(args []string, argToFind string, argToFindLen int, takeParam bo
 			}
 		}
 	}
-
 	return false, ""
 }
