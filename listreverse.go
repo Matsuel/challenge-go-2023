@@ -2,7 +2,8 @@ package piscine
 
 func ListReverse(l *List) {
 	noeud_courant := l.Head
-	r := nil
+	r := l.Head
+	r = nil
 	for noeud_courant != nil {
 		noeud_suivant := noeud_courant.Next
 		noeud_courant.Next = r
